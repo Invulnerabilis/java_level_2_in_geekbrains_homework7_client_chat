@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="373.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ru.vk.client_chat.controllers.ChatController">
+    <children>
+        <SplitPane prefHeight="373.0" prefWidth="570.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0"
+                            minWidth="0.0" prefHeight="398.0" prefWidth="178.0">
+                    <children>
+                        <ListView fx:id="usersList" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0"
+                                  prefWidth="217.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <SplitPane dividerPositions="0.8661616161616161" orientation="VERTICAL" prefHeight="398.0"
+                                   prefWidth="486.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <TextArea fx:id="chatHistory" editable="false"
+                                                  maxHeight="1.7976931348623157E308" prefHeight="298.0"
+                                                  prefWidth="345.0" wrapText="true" VBox.vgrow="ALWAYS">
+                                        </TextArea>
+                                    </children>
+                                </VBox>
+                                <AnchorPane maxHeight="50.0" minHeight="30.0" minWidth="0.0" prefWidth="160.0">
+                                    <children>
+                                        <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                                              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                              AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <TextField fx:id="inputField" maxHeight="1.7976931348623157E308"
+                                                           onKeyPressed="#onKeyPressed"
+                                                           promptText="Insert your message here" HBox.hgrow="ALWAYS">
+                                                    <font>
+                                                        <Font size="14.0"/>
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets right="2.0"/>
+                                                    </HBox.margin>
+                                                </TextField>
+                                                <Button fx:id="sendButton" contentDisplay="CENTER"
+                                                        maxHeight="1.7976931348623157E308" mnemonicParsing="false"
+                                                        onAction="#sendMessage" prefHeight="45.0" prefWidth="70.0"
+                                                        text="Send">
+                                                    <font>
+                                                        <Font size="18.0"/>
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
